@@ -9,8 +9,7 @@
 ## DEPLOYMENT[https://aphisit-ths.github.io/member-profiles/]
 ### Github repo [https://github.com/aphisit-ths/member-profiles]
 
-### 63015208
-
+## Member
 ### 63015101 NIRMON AUTWISAI
 ### 63015123 PANTAWAT THUNANUKUL
 ### 63015208 APHISIT THUBSAENG
