@@ -10,6 +10,6 @@
 ### Github repo [https://github.com/aphisit-ths/member-profiles]
 
 ## Member
-### 63015101 NIRMON AUTWISAI
-### 63015123 PANTAWAT THUNANUKUL
-### 63015208 APHISIT THUBSAENG
+### 63015101 Nirmon Oatsawasai
+### 63015123 Pantawat Thunanukul
+### 63015208 Aphisit thubsaeng
