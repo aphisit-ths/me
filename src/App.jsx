@@ -15,7 +15,7 @@ const data = [
   },
   {
     id: "63015101",
-    name: "nirmon autwisai",
+    name: "nirmon oatsawasai",
     desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget nibh at mi pharetra sodales. Nulla lacinia mauris justo, nec hendrerit libero lobortis convallis. Nulla eros nulla, viverra a sollicitudin vitae, consequat vel sem. Aenean porta sodales augue, vitae rhoncus sem fermentum sollicitudin. Sed quis urna at metus auctor varius in condimentum felis. Praesent ac pellentesque risus, eget efficitur velit. Sed a ex non felis",
     img: "https://avatars.githubusercontent.com/u/88425142?v=4",
   },
@@ -23,10 +23,11 @@ const data = [
 function App() {
   return (
     <div className="App">
+      
       {data.map((info, i) => (
         <ProfileCard info={data[i]} />
       ))}
-      
+  
     </div>
   );
 }

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import Vote from "./vote/vote";
+import Vote from "../vote/vote";
 import "./profilecard.css";
 export default function ProfileCard({ info }) {
+
+  //State for Vote Score 
   const [vote, setVote] = useState(0);
 
   //ฟังชั่นสหรับการเพิ่มคะแนน vote
@@ -40,7 +42,8 @@ export default function ProfileCard({ info }) {
           <p>{info.desc}</p>
         </div>
         <div className="vote-section">
-          <Vote vote={vote} onVote={onVote} onUnVote={onUnVote} />
+          {/* Call Vote btn Components */}
+          <Vote voteScore={vote} onVote={onVote} onUnVote={onUnVote} />
         </div>
       </div>
       <div className="image">
