@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import Vote from "../vote/vote";
 import "./profilecard.css";
 export default function ProfileCard({ info }) {
-
-  //State for Vote Score 
+  //State for Vote Score
   const [vote, setVote] = useState(0);
 
   //ฟังชั่นสหรับการเพิ่มคะแนน vote
@@ -14,6 +13,7 @@ export default function ProfileCard({ info }) {
       setVote(vote + 1);
     }
   }
+
   //ฟังชั่นสหรับการลดคะแนน vote
   function onUnVote() {
     if (vote <= 0) {
@@ -32,12 +32,8 @@ export default function ProfileCard({ info }) {
     <div className="card-area">
       <div className="info">
         <div className="info-section">
-          <h1>
-          {info.id}
-          </h1>
-          <h1>
-            {info.name} 
-          </h1>
+          <h1>{info.id}</h1>
+          <h1>{info.name}</h1>
           <h2>Hi there👋 ,</h2>
           <p>{info.desc}</p>
         </div>

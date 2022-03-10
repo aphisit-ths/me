@@ -1,33 +1,38 @@
 import "./App.css";
-import ProfileCard from "./components/profilecard";
-const data = [
-  {
-    id: "63015208",
-    name: "aphisit thubsaeng",
-    desc: "My name is Oat, I'm a 2nd-year computer engineering student @KMITL | Bangkok,Thailand currently , I interested about how to be good software engineer . I try to learning everything about technology that for my future carreer path. Go for it",
-    img: "https://avatars.githubusercontent.com/u/82308226?v=4",
-  },
-  {
-    id: "63015123",
-    name: "pantawat thunanukul",
-    desc:"In hac habitasse platea dictumst. Sed vel fermentum nunc. Etiam eget pulvinar ante. Donec venenatis nisi eget placerat aliquet. Proin quis porta nisi. Cras volutpat feugiat eros in aliquet. Suspendisse eros nulla, tempor vitae finibus eget, euismod eu nisi. Integer a eros ex. Nam at diam vel nibh elementum sagittis in eget",
-    img: "https://avatars.githubusercontent.com/u/88423130?v=4",
-  },
-  {
-    id: "63015101",
-    name: "nirmon oatsawasai",
-    desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget nibh at mi pharetra sodales. Nulla lacinia mauris justo, nec hendrerit libero lobortis convallis. Nulla eros nulla, viverra a sollicitudin vitae, consequat vel sem. Aenean porta sodales augue, vitae rhoncus sem fermentum sollicitudin. Sed quis urna at metus auctor varius in condimentum felis. Praesent ac pellentesque risus, eget efficitur velit. Sed a ex non felis",
-    img: "https://avatars.githubusercontent.com/u/88425142?v=4",
-  },
-];
+import IntroPage from "./components/intro";
+import Preload from "./components/preload";
+import React, { useState, useEffect, useRef } from "react";
 function App() {
+  const [preloader, setPreloader] = useState(true);
+  const [timer, setTimer] = useState(1);
+  const id = useRef(null);
+  const clear = () => {
+    window.clearInterval(id.current);
+    setPreloader(false);
+  };
+
+  useEffect(() => {
+    id.current = window.setInterval(() => {
+      setTimer((timer) => timer - 1);
+    }, 1000);
+  }, []);
+  useEffect(() => {
+    if (timer === 0) {
+      clear();
+    }
+  }, [timer]);
+
   return (
     <div className="App">
-      
-      {data.map((info, i) => (
-        <ProfileCard info={data[i]} />
-      ))}
-  
+      {preloader ? (
+        <Preload />
+      ) : (
+        <>
+          <IntroPage / >
+          <IntroPage / >
+          
+        </>
+      )}
     </div>
   );
 }
