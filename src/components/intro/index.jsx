@@ -1,16 +1,47 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { useInView } from "react-intersection-observer";
+import { motion, useViewportScroll, useTransform } from "framer-motion";
 import "./intro.scss";
 function IntroPage() {
-  const me = "https://scontent.fbkk9-3.fna.fbcdn.net/v/t39.30808-6/275371442_4953293474747403_2344795398102508870_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeGxSVFTTxZwXDwAE8luuOvjxmxfAD9ozNTGbF8AP2jM1Lc2tcBhy7paapNJfzvCOXt8NJFPNq64ET0sk7vpBE_2&_nc_ohc=gwgu2EPe1LUAX9da0u0&_nc_zt=23&_nc_ht=scontent.fbkk9-3.fna&oh=00_AT96FQ5zRXnYZ8XTytZxRsPR5hSgM_vquJHbDlE-tlWCOg&oe=622FF7B6";
+  const { scrollY, scrollX } = useViewportScroll();
+  const y1 = useTransform(scrollY, [0, 500], [0, -100]);
+  const y2 = useTransform(scrollY, [0, 400], [0, -150]);
+  const img = useTransform(scrollY, [0, 400], [0, 150]);
+
+  const variants = {
+    visible: { scale: 1 },
+    hidden: {
+      scale: 1.2,
+    },
+    init: {
+      opacity: [0, .5 , 1],
+    },
+  };
+
+  
+  const me =
+    "https://scontent.fbkk9-3.fna.fbcdn.net/v/t39.30808-6/275371442_4953293474747403_2344795398102508870_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeGxSVFTTxZwXDwAE8luuOvjxmxfAD9ozNTGbF8AP2jM1Lc2tcBhy7paapNJfzvCOXt8NJFPNq64ET0sk7vpBE_2&_nc_ohc=gwgu2EPe1LUAX9da0u0&_nc_zt=23&_nc_ht=scontent.fbkk9-3.fna&oh=00_AT96FQ5zRXnYZ8XTytZxRsPR5hSgM_vquJHbDlE-tlWCOg&oe=622FF7B6";
   return (
-    <div className="intro" >
+    <div className="intro">
       <div className="image-section">
-        <img src={me} alt="my img" />
+        <motion.img src={me} style={{ y: img }} alt="my img" />
       </div>
       <div className="info-section">
-        <h1>OATH</h1>
-        <h2>APHISIT TUBSAENG</h2>
-        </div>
+        <motion.h1
+          variants={variants}
+          animate={"init"}
+          transition={{ duration: 6, ease: "easeOut" }}
+          style={{ y: y1 }}
+        >
+          OATH
+        </motion.h1>
+        <motion.h2
+          transition={{ duration: 2, ease: "easeOut" }}
+          style={{ y: y2 }}
+        >
+          APHISIT TUBSAENG
+        </motion.h2>
+      </div>
     </div>
   );
 }

@@ -1,7 +1,9 @@
 import "./App.css";
+import React, { useState, useEffect, useRef } from "react";
+//Pages
 import IntroPage from "./components/intro";
 import Preload from "./components/preload";
-import React, { useState, useEffect, useRef } from "react";
+import InfoPage from "./components/info";
 function App() {
   const [preloader, setPreloader] = useState(true);
   const [timer, setTimer] = useState(1);
@@ -29,7 +31,8 @@ function App() {
       ) : (
         <>
           <IntroPage / >
-          <IntroPage / >
+          <InfoPage/> 
+        
           
         </>
       )}
