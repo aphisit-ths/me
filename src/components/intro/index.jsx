@@ -41,9 +41,8 @@ function IntroPage() {
           className="std"
           variants={variants}
           animate={"init"}
-          
         >
-         ( a sophomore year student at Computer Engineer student @KMITL Bangkok
+         ( a sophomore year student at Computer Engineer @KMITL Bangkok
           ,THAILAND)
         </motion.h1>
         <motion.h2
