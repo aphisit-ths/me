@@ -33,7 +33,6 @@ function App() {
         <Preload />
       ) : (
         <>
-        <Preload />
           <IntroPage />
           <InfoPage />
         </>

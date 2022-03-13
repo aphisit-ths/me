@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 import "./intro.scss";
 function IntroPage() {
-  const { scrollY, scrollX } = useViewportScroll();
+  const { scrollY } = useViewportScroll();
   const y1 = useTransform(scrollY, [0, 500], [0, -100]);
   const y2 = useTransform(scrollY, [0, 400], [0, -150]);
   const img = useTransform(scrollY, [0, 400], [0, -300]);
