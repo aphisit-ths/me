@@ -18,7 +18,7 @@ function App() {
   useEffect(() => {
     id.current = window.setInterval(() => {
       setTimer((timer) => timer - 1);
-    }, 4000);
+    }, 5000);
   }, []);
   useEffect(() => {
     if (timer === 0) {
@@ -33,6 +33,7 @@ function App() {
         <Preload />
       ) : (
         <>
+        <Preload />
           <IntroPage />
           <InfoPage />
         </>
