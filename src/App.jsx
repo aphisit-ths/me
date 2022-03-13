@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import IntroPage from "./components/intro";
 import Preload from "./components/preload";
 import InfoPage from "./components/info";
+import CustomCursor from "./components/customCurcor";
 function App() {
   const [preloader, setPreloader] = useState(true);
   const [timer, setTimer] = useState(1);
@@ -30,10 +31,11 @@ function App() {
         <Preload />
       ) : (
         <>
-          <IntroPage / >
-          <InfoPage/> 
-        
-          
+          <IntroPage />
+          <InfoPage />
+          <InfoPage />
+          <InfoPage />
+          <InfoPage />
         </>
       )}
     </div>
