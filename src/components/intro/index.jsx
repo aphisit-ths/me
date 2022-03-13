@@ -35,15 +35,15 @@ function IntroPage() {
           animate={"init"}
           transition={{ duration: 6, ease: "easeOut" }}
         >
-          Hi there , I'm <span>Oat </span>
+          Hi there , I'm <span>Oath </span>
         </motion.h1>
         <motion.h1
           className="std"
           variants={variants}
           animate={"init"}
         >
-         ( a sophomore year student at Computer Engineer @KMITL Bangkok
-          ,THAILAND)
+          a sophomore student at Computer Engineer @KMITL Bangkok
+          ,THAILAND
         </motion.h1>
         <motion.h2
           variants={variants}

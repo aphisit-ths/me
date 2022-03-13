@@ -3,7 +3,16 @@
     height: 100vh;
     display: flex;
     align-items: center;
-    overflow: visible;
     justify-content: center;
     background-color: #191919;
+    .circle {
+        position: absolute;
+        top: 100%;
+        right: 10px;
+        width: 800px;
+        height: 800px;
+        border-radius: 50%;
+        background-color: #FBEEAC;
+    }
+    .info-section {}
 }
