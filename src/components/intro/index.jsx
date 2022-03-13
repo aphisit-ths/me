@@ -26,26 +26,36 @@ function IntroPage() {
     "https://scontent.fbkk9-3.fna.fbcdn.net/v/t39.30808-6/275371442_4953293474747403_2344795398102508870_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeGxSVFTTxZwXDwAE8luuOvjxmxfAD9ozNTGbF8AP2jM1Lc2tcBhy7paapNJfzvCOXt8NJFPNq64ET0sk7vpBE_2&_nc_ohc=gwgu2EPe1LUAX9da0u0&_nc_zt=23&_nc_ht=scontent.fbkk9-3.fna&oh=00_AT96FQ5zRXnYZ8XTytZxRsPR5hSgM_vquJHbDlE-tlWCOg&oe=622FF7B6";
   return (
     <div className="intro">
-      <motion.div style={{y:img}} className="image-section">
-        <motion.img  src={me} alt="my img" />
+      <motion.div  className="image-section">
+        <motion.img src={me} alt="my img" />
       </motion.div>
-      <div className="image-section2"></div>
       <div className="info-section">
         <motion.h1
           variants={variants}
           animate={"init"}
           transition={{ duration: 6, ease: "easeOut" }}
-          style={{ y: y1 }}
         >
-          OATH
+          Hi there , I'm <span>Oat </span>
+        </motion.h1>
+        <motion.h1
+          className="std"
+          variants={variants}
+          animate={"init"}
+          
+        >
+         ( a sophomore year student at Computer Engineer student @KMITL Bangkok
+          ,THAILAND)
         </motion.h1>
         <motion.h2
           variants={variants}
           animate={"yAnimation"}
           transition={{ repeat: Infinity, duration: 2 }}
-          style={{ y: y2 }}
+          
         >
-          APHISIT TUBSAENG
+          I'm looking for a summer internship with posistion{" "}
+          <span>
+            Software Engineer(Front-end), UX/UI Designer ,Data Anaylst
+          </span>
         </motion.h2>
       </div>
     </div>

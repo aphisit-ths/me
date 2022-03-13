@@ -32,10 +32,7 @@ function App() {
       ) : (
         <>
           <IntroPage />
-          <InfoPage />
-          <InfoPage />
-          <InfoPage />
-          <InfoPage />
+         
         </>
       )}
     </div>
