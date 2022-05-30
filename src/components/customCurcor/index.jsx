@@ -42,12 +42,11 @@ function CustomCursor() {
       } else {
         positionRef.current.distanceX = (mouseX - desinationX) * 0.05;
         positionRef.current.distanceY = (mouseY - desinationY) * 0.05;
-
         if (
           Math.abs(
             positionRef.current.distanceX +
               Math.abs(positionRef.current.distanceY) <
-              0.1
+              0.6
           )
         ) {
           positionRef.current.desinationX = mouseX;
@@ -65,7 +64,6 @@ function CustomCursor() {
   return (
     <>
       <div className="secondary-cursor" ref={secondaryCursor}></div>
-      <div className="cursor" ref={mainCursor}></div>
     </>
   );
 }
