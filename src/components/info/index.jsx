@@ -16,8 +16,7 @@ function InfoPage() {
   }
   const { scrollY, scrollX } = useViewportScroll();
   const c1 = useTransform(scrollY, [0, 1000], [0, 400]);
-  const me =
-    "  https://scontent.fbkk12-3.fna.fbcdn.net/v/t39.30808-6/274297587_4906065889470162_7809501269451634335_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeGuW-KlCre34A_djNMdxUQ4YPfL98wk3Kxg98v3zCTcrFiVdjzprCKLgtV32ooeTcCy9IOZTChkQOFoNMl6qif8&_nc_ohc=is8wxa09nLwAX9dg-AU&_nc_zt=23&_nc_ht=scontent.fbkk12-3.fna&oh=00_AT9DbO-29kxLhe6fhJBmJMZUFbOxSgszBg1NjzViegdqQA&oe=62332C56";
+  const me = "https://web.facebook.com/photo/?fbid=5135634849846597&set=a.106111989465600"
   return (
     <div className="info-root">
       <div className="info-section">

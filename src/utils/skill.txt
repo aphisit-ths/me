@@ -1,0 +1,25 @@
+// {"skill":[
+  
+// ]}
+
+
+
+// HTML/SCSS Implemented responsive layouts concept
+// for application with Grid, Flexbox and basic knowledge for CSS
+// Library such as TailwindCSS, MaterialUI .
+
+
+// Design Tools  Figma, Adobe XD, Adobe Photoshop,
+// Adobe Illustrator Implemented basic knowledge of color rule,
+// layers concept and components concept .
+
+
+// Database MongoDB , SQL
+
+
+// Python Machine Learning Tools Such as sklearn ,
+// pandas seaborn or another visualization library.
+
+
+// Others Another library for web application such
+// as Framer Motion, etc.
