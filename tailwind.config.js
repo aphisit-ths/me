@@ -6,6 +6,9 @@ module.exports = {
         inter: ['Inter', 'sans-serif'],
       },
     },
+    borderWidth: {
+      minimal: ['.5px'],
+    },
   },
   plugins: [],
 };
