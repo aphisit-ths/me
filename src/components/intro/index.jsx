@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 function IntroPage() {
   return (
-    <div className='flex w-screen h-screen justify-center items-center flex-col bg-slate-50'>
+    <div className='flex w-screen h-screen justify-center items-center flex-col bg-slate-50 relative'>
       <div className='w-full h-full relative p-10'>
         <motion.div
           animate={{ x: [-30, 10, -30] }}

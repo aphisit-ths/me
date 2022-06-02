@@ -13,7 +13,7 @@ function Navbar() {
           Home
         </p>
         <ul className='flex justify-evenly'>
-          <a href='#project'>
+          <a href='/#project'>
             <li className=' font-inter font-semibold ml-10 cursor-pointer text-gray-700'>
               Project
             </li>
