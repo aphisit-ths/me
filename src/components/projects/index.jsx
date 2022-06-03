@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { projects } from '../../utils/myinfo/projects';
 
 function Projects() {
-  console.log(projects);
   return (
     <section
       id='project'

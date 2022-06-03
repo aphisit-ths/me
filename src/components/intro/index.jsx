@@ -1,7 +1,39 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 function IntroPage() {
+  //Ref
+  const hero1 = useRef(null);
+  const hero2 = useRef(null);
+
+  useEffect(() => {
+    const animate_obj = {
+      duration: 0.7,
+      x: -80,
+      opacity: 0,
+    };
+    gsap.to(hero1.current, {
+      scrollTrigger: {
+        trigger: hero1.current,
+        start: 'center 30%',
+        scrub: true,
+      },
+      ...animate_obj,
+    });
+    gsap.to(hero2.current, {
+      scrollTrigger: {
+        trigger: hero2.current,
+        start: 'center 30%',
+        scrub: true,
+      },
+      ...animate_obj,
+      x: 80,
+    });
+  }, []);
+
   return (
     <div className='flex w-screen h-screen justify-center items-center flex-col bg-slate-50 relative'>
       <div className='w-full h-full relative p-10'>
@@ -46,18 +78,14 @@ function IntroPage() {
           Aphisit Thupsaeng{' '}
         </motion.span>
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
           className='font-normal font-inter text-3xl md:text-5xl  xl:text-9xl'
+          ref={hero1}
         >
           Software Developer{' '}
         </motion.h1>
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
           className='font-normal font-inter text-3xl md:text-5xl  xl:text-9xl '
+          ref={hero2}
         >
           Data Analytic{' '}
         </motion.h1>
