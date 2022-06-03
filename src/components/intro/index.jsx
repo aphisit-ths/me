@@ -36,12 +36,12 @@ function IntroPage() {
           className={`w-96 h-96 border-minimal border-gray-400  cursor-pointer rounded-full hover:bg-green-200  absolute top-60 right-32`}
         ></motion.div>
       </div>
-      <div className='w-auto absolute'>
+      <div className='w-auto absolute '>
         <motion.span
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className='font-light font-inter text-2xl'
+          className='font-light font-inter text-xl xl:text-2xl'
         >
           Aphisit Thupsaeng{' '}
         </motion.span>
@@ -49,7 +49,7 @@ function IntroPage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className='font-normal font-inter text-9xl'
+          className='font-normal font-inter text-3xl md:text-5xl  xl:text-9xl'
         >
           Software Developer{' '}
         </motion.h1>
@@ -57,7 +57,7 @@ function IntroPage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className='font-normal font-inter text-9xl '
+          className='font-normal font-inter text-3xl md:text-5xl  xl:text-9xl '
         >
           Data Analytic{' '}
         </motion.h1>
@@ -65,7 +65,7 @@ function IntroPage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
-          className='font-normal font-inter text-2xl text-gray-500 '
+          className='font-normal font-inter text-xl xl:text-2xl text-gray-500 '
         >
           (Looking for internship)
         </motion.h1>
