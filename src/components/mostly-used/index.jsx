@@ -4,15 +4,14 @@ import { gsap } from 'gsap';
 function MostlyUsedPage() {
   const icons = {
     row1: ['js', 'python', 'ts', 'mongo'],
-    row2: ['react', 'next', 'nodejs', 'gql', 'framermotion'],
-    row3: ['gsap', 'html', 'sass', 'css', 'tailwindcss'],
-    row4: ['figma', 'docker', 'github'],
+    row2: ['react', 'next', 'nodejs', 'gql'],
+    row3: ['gsap', 'html', 'sass', 'tailwindcss'],
+    row4: ['figma', 'docker', 'github', 'framermotion'],
   };
-  const random = Math.floor(Math.random() * 100 + 1);
   const Row1 = icons.row1.map((icon, i) => (
     <>
       <img
-        className='w-32 h-32'
+        className='w-20 h-20 md:w-32 md:h-32'
         key={i}
         src={process.env.PUBLIC_URL + `/assets/${icon + '.png'}`}
         alt={icon}
@@ -22,7 +21,7 @@ function MostlyUsedPage() {
   const Row2 = icons.row2.map((icon, i) => (
     <>
       <img
-        className='w-32 h-32'
+        className='w-20 h-20 md:w-32 md:h-32'
         key={i}
         src={process.env.PUBLIC_URL + `/assets/${icon + '.png'}`}
         alt={icon}
@@ -32,7 +31,7 @@ function MostlyUsedPage() {
   const Row3 = icons.row3.map((icon, i) => (
     <>
       <img
-        className='w-32 h-32'
+        className='w-20 h-20 md:w-32 md:h-32'
         key={i}
         src={process.env.PUBLIC_URL + `/assets/${icon + '.png'}`}
         alt={icon}
@@ -42,7 +41,7 @@ function MostlyUsedPage() {
   const Row4 = icons.row4.map((icon, i) => (
     <>
       <motion.img
-        className='w-32 h-32 '
+        className='w-20 h-20 md:w-32 md:h-32 '
         key={i}
         src={process.env.PUBLIC_URL + `/assets/${icon + '.png'}`}
         alt={icon}
@@ -57,10 +56,11 @@ function MostlyUsedPage() {
           Interested Technology Stack
         </h1>
       </div>
-      <div className='flex flex-row '>{Row1}</div>
-      <div className='flex flex-row'>{Row2}</div>
-      <div className='flex flex-row'>{Row3}</div>
-      <div className='flex flex-row'>{Row4}</div>
+
+      <div className='flex flex-row max-w-lg'>{Row1}</div>
+      <div className='flex flex-row max-w-lg'>{Row2}</div>
+      <div className='flex flex-row max-w-lg'>{Row3}</div>
+      <div className='flex flex-row max-w-lg'>{Row4}</div>
     </div>
   );
 }

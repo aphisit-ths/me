@@ -2,7 +2,7 @@ export const projects = [
   {
     projectName: 'KMITL-REVIEWER',
     desc: 'selective subject review platform to share experience for select the appropriate subjects.',
-    stack: ['next-js', 'Apollo GraphQL', 'Mongo DB'],
+    stack: ['Next-js', 'Apollo GraphQL', 'MongoDB'],
     githubLink: 'https://github.com/aphisit-ths/frontend-nextjs',
     type: 'Web Development',
     imgUrl: '/kmit-reviewer.png',
@@ -10,7 +10,7 @@ export const projects = [
   {
     projectName: 'TIAW HA THUM  ',
     desc: 'platform to share experience of cultural attraction . ',
-    stack: ['REACT JS ', 'GRAPHQL ', 'ASP.NET MVC'],
+    stack: ['ReactJs ', 'Apollo GraphQL ', 'ASP.NET MVC', 'JSON Files'],
     githubLink: 'https://github.com/aphisit-ths/frontend-nextjs',
     type: 'Web Development',
     imgUrl: '/tiawhadhum.png',

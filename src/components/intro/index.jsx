@@ -8,6 +8,7 @@ function IntroPage() {
   //Ref
   const hero1 = useRef(null);
   const hero2 = useRef(null);
+  const nameHero = useRef(null);
 
   useEffect(() => {
     const animate_obj = {
@@ -15,6 +16,14 @@ function IntroPage() {
       x: -80,
       opacity: 0,
     };
+    gsap.to(nameHero.current, {
+      scrollTrigger: {
+        trigger: nameHero.current,
+        start: 'center 30%',
+        scrub: true,
+      },
+      ...animate_obj,
+    });
     gsap.to(hero1.current, {
       scrollTrigger: {
         trigger: hero1.current,
@@ -70,9 +79,7 @@ function IntroPage() {
       </div>
       <div className='w-auto absolute '>
         <motion.span
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
+          ref={nameHero}
           className='font-light font-inter text-xl xl:text-2xl'
         >
           Aphisit Thupsaeng{' '}
@@ -90,9 +97,7 @@ function IntroPage() {
           Data Analytic{' '}
         </motion.h1>
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7 }}
+          ref={hero1}
           className='font-normal font-inter text-xl xl:text-2xl text-gray-500 '
         >
           (Looking for internship)

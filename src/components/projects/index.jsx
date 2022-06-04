@@ -13,17 +13,17 @@ function Projects() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
-          className='font-medium font-inter text-3xl md:text-4xl  xl:text-6xl'
+          className='font-medium font-inter text-3xl md:text-4xl  xl:text-5xl'
         >
-          Relevant{' '}
+          Selected{' '}
         </motion.h1>
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1 }}
-          className='font-medium font-inter ml-20 text-3xl md:text-4xl  xl:text-6xl text-gray-500'
+          className='font-medium font-inter ml-20 text-3xl md:text-4xl  xl:text-5xl text-gray-500'
         >
-          Project{' '}
+          Projects{' '}
         </motion.h1>
       </div>
       <div className='flex flex-col md:flex-row  gap-10 flex-wrap w-full justify-center h-auto  mt-10'>
