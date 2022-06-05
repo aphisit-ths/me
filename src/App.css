@@ -10,4 +10,5 @@ html {
 
 .App {
     overflow-y: hidden;
+    background: black;
 }
