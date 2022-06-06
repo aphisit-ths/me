@@ -7,6 +7,7 @@ import IntroPage from './components/intro';
 import Navbar from './components/nav';
 import Projects from './components/projects';
 import MostlyUsedPage from './components/mostly-used';
+import InteractCard from './components/card/interactcard';
 function App() {
   const appRef = useRef(null);
   const size = useWindowSize();
@@ -46,6 +47,7 @@ function App() {
       <section ref={appRef}>
         <Navbar />
         <IntroPage />
+        <InteractCard />
         <MostlyUsedPage />
         <Projects />
       </section>
