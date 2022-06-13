@@ -19,7 +19,7 @@ function InteractCard() {
   }, []);
 
   return (
-    <div className='w-full px-1 md:px-10  h-screen flex flex-row justify-center items-center align-middle relative'>
+    <div className='w-full px-1 md:px-10  h-screen flex flex-row justify-center items-center align-middle relative overflow-visible'>
       <div
         ref={black}
         className='flex xl:w-2/3 bg-secondblack-0 h-1/2  w-screen  absolute rounded-large left-0  justify-center align-middle items-center '
@@ -27,8 +27,8 @@ function InteractCard() {
         <p className='font-inter font-normal text-xl md:text-4xl xl:text-5xl text-mypurple-0 w-4/5'>
           <span className='italic'>currently ,</span> I interested in Web
           Development and data vizualization . Also in my freetime I’m always
-          reading technology arcticle on medium ,etc. or watch interactive
-          content .
+          reading technology arcticle on medium ,etc. and watch interactive web
+          design content .
         </p>
       </div>
       <div

@@ -9,7 +9,7 @@ html {
 }
 
 .App {
-    overflow-y: hidden;
+    overflow: hidden;
     background: black;
-    padding: 20px 20px;
+    /* padding: 20px 20px; */
 }

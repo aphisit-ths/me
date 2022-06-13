@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Row1, Row2, Row3, Row4 } from './techstack_ele';
@@ -15,7 +14,6 @@ function MostlyUsedPage() {
       delay: delay,
       scrollTrigger: {
         trigger: row,
-        scrub: true,
         start: 'top bottom',
         end: 'center 70% ',
       },
@@ -32,9 +30,9 @@ function MostlyUsedPage() {
   const body = useRef(null);
   //define animate
   useEffect(() => {
-    const rowEffect = setRowEffect(rowRef.current, 0.5, 100);
+    const rowEffect = setRowEffect(rowRef.current, 0.5, -100);
     const row2Effect = setRowEffect(row2Ref.current, 0.8, 200);
-    const row3Effect = setRowEffect(row3Ref.current, 1.1, 300);
+    const row3Effect = setRowEffect(row3Ref.current, 1.1, -300);
     const row4Effect = setRowEffect(row4Ref.current, 1.3, 400);
 
     gsap.from(rowRef.current, { ...rowEffect });

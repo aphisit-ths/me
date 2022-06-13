@@ -20,7 +20,7 @@ module.exports = {
       },
     },
     borderWidth: {
-      minimal: ['.5px'],
+      minimal: ['2px'],
     },
   },
   plugins: [],
