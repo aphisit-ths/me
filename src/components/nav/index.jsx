@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import gsap from 'gsap';
+import ScrollToPlugin from 'gsap/ScrollToPlugin';
+gsap.registerPlugin(ScrollToPlugin);
+
 function Navbar() {
+  const goto = (id) => {
+    gsap.to(window, { duration: 1, scrollTo: { y: id, offsetY: 70 } });
+  };
+
   return (
     <motion.nav
       initial={{ y: -20, opacity: 0 }}
@@ -16,19 +24,24 @@ function Navbar() {
             alt='me'
           />
         </a>
-        <ul className='flex justify-evenly gap-5'>
-          <a href='/me/#project'>
-            <li className=' font-inter font-semibold ml-3 md:ml-10 text-sm  cursor-pointer text-gray-50'>
-              Project
-            </li>
-          </a>
+        <ul className='flex justify-evenly align-middle items-center gap-5'>
+          <li
+            onClick={() => goto('#myproject')}
+            className=' font-inter font-semibold ml-3 md:ml-10 text-sm  cursor-pointer text-gray-50'
+          >
+            Project
+          </li>
 
           <li className=' font-inter font-semibold ml-3 md:ml-10 text-sm  cursor-pointer text-gray-50'>
             About me
           </li>
-          <li className=' font-inter font-semibold ml-3 md:ml-10 text-sm  cursor-pointer text-yellow-400'>
+          <a
+            href={process.env.PUBLIC_URL + '/resume/aphisit_thu_resume.pdf'}
+            download
+            className=' font-inter font-semibold ml-3 md:ml-10 text-sm  cursor-pointer bg-white px-6 py-2 rounded-full text-black hover:bg-mypurple-0'
+          >
             Resume+
-          </li>
+          </a>
         </ul>
       </div>
     </motion.nav>

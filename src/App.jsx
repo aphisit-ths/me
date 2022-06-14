@@ -7,7 +7,7 @@ import Navbar from './components/nav';
 import Projects from './components/projects';
 import MostlyUsedPage from './components/mostly-used';
 import InteractCard from './components/card/interactcard';
-
+import InfoPage from './components/info';
 function App() {
   return (
     <div className='App'>
@@ -15,6 +15,7 @@ function App() {
         <Navbar />
         <IntroPage />
         <InteractCard />
+        {/* <InfoPage /> */}
         {/* <MostlyUsedPage /> */}
         <Projects />
       </div>

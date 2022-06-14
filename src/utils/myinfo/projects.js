@@ -17,6 +17,7 @@ export const projects = [
   {
     name: 'WOLDLY  (REACT JS ,FAST API )',
     desc: 'Make API service from  web scarping. Developed fron-tend with ReactJS , D3js ,Framer Motion ,Sevice API with Fast API',
+    url: 'https://github.com/aphisit-ths/TOC-ASSIGNMENT-FRONTEND',
   },
 ];
 

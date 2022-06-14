@@ -13,6 +13,7 @@ module.exports = {
     extend: {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
+        yeseva: ['Satoshi', 'sans-serif'],
       },
       colors: {
         secondblack: ['#1B1B1F'],
