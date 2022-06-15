@@ -68,7 +68,7 @@ function IntroPage() {
             type: 'spring',
             stiffness: 500,
           }}
-          className={`w-96 h-96 border-minimal border-gray-400  cursor-pointer rounded-full  absolute bottom-20 left-2/4`}
+          className={`w-96 h-96 border-minimal border-gray-400   rounded-full  absolute bottom-20 left-2/4`}
         ></motion.div>
         <motion.div
           ref={circle2}
@@ -79,7 +79,7 @@ function IntroPage() {
             type: 'spring',
             stiffness: 500,
           }}
-          className={`w-96 h-96 border-minimal border-gray-400  cursor-pointer rounded-full  absolute bottom-20 left-2/4`}
+          className={`w-96 h-96 border-minimal border-gray-400   rounded-full  absolute bottom-20 left-2/4`}
         ></motion.div>
         <motion.div
           ref={circle3}
@@ -90,7 +90,7 @@ function IntroPage() {
             type: 'spring',
             stiffness: 200,
           }}
-          className={`w-96 h-96 border-minimal border-gray-400  cursor-pointer rounded-full  absolute top-60 right-32`}
+          className={`w-96 h-96 border-minimal border-gray-400   rounded-full  absolute top-60 right-32`}
         ></motion.div>
       </div>
       <div ref={hero_section} className='w-auto absolute '>
